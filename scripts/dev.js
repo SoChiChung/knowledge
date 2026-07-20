@@ -96,7 +96,7 @@ function executeRebuild(filePath) {
   pending = false;
   logBuildStart(filePath);
 
-  build({ silent: true, clean: true })
+  build({ silent: true, clean: false })
     .then((elapsed) => {
       logBuildDone(elapsed);
       if (bsInstance) bsInstance.reload();
@@ -162,35 +162,43 @@ async function startDev() {
   console.log(`  ✓ BrowserSync started`);
   watching();
 
-  // Watch knowledge/ — Markdown and image changes → rebuild
-  const knowledgeWatcher = watch(path.join(buildConfig.knowledgeDir, '**/*'), {
+  // Shared chokidar options for cross-platform reliability.
+  // usePolling is required on Windows (Git Bash / WSL) to detect filesystem events.
+  // Debounce is handled by dev.js itself, so no awaitWriteFinish needed here.
+  const watchOpts = {
     ignored: /(^|[\\/])\./,
-    ignoreInitial: true
-  });
+    ignoreInitial: true,
+    usePolling: true,
+    interval: 300,
+    depth: 99
+  };
 
+  // Watch knowledge/ — Markdown and image changes → rebuild.
+  // Must watch the directory itself (not a glob) so polling detects new subdirectories.
   const knowledgePattern = /\.(md|png|jpe?g|gif|webp|svg)$/i;
-  knowledgeWatcher.on('change', (p) => { if (knowledgePattern.test(p)) triggerRebuild(p); });
-  knowledgeWatcher.on('add', (p) => { if (knowledgePattern.test(p)) triggerRebuild(p); });
-  knowledgeWatcher.on('unlink', (p) => { if (knowledgePattern.test(p)) triggerRebuild(p); });
+  const isKnowledgeFile = (p) => knowledgePattern.test(p);
 
-  // Watch demo/ — HTML/CSS/JS changes → direct reload
-  const demoWatcher = watch(path.join(buildConfig.demoDir, '**/*'), {
-    ignored: /(^|[\\/])\./,
-    ignoreInitial: true
-  });
+  const knowledgeWatcher = watch(buildConfig.knowledgeDir, watchOpts);
+  knowledgeWatcher.on('change', (p) => { if (isKnowledgeFile(p)) triggerRebuild(p); });
+  knowledgeWatcher.on('add', (p) => { if (isKnowledgeFile(p)) triggerRebuild(p); });
+  knowledgeWatcher.on('unlink', (p) => { if (isKnowledgeFile(p)) triggerRebuild(p); });
 
+  // Watch demo/ — HTML/CSS/JS changes → direct reload.
   const demoPattern = /\.(html|css|js)$/i;
-  demoWatcher.on('change', (p) => { if (demoPattern.test(p)) triggerReload(p); });
-  demoWatcher.on('add', (p) => { if (demoPattern.test(p)) triggerReload(p); });
+  const isDemoFile = (p) => demoPattern.test(p);
 
-  // Watch scripts/ — JS changes → rebuild
+  const demoWatcher = watch(buildConfig.demoDir, watchOpts);
+  demoWatcher.on('change', (p) => { if (isDemoFile(p)) triggerReload(p); });
+  demoWatcher.on('add', (p) => { if (isDemoFile(p)) triggerReload(p); });
+
+  // Watch scripts/ — JS changes → rebuild.
   const scriptsDir = path.join(rootDir, 'scripts');
-  const scriptsWatcher = watch(path.join(scriptsDir, '**/*.js'), {
-    ignored: /(^|[\\/])\./,
-    ignoreInitial: true
-  });
-  scriptsWatcher.on('change', (p) => triggerRebuild(p));
-  scriptsWatcher.on('add', (p) => triggerRebuild(p));
+  const scriptsPattern = /\.js$/i;
+  const isScriptFile = (p) => scriptsPattern.test(p);
+
+  const scriptsWatcher = watch(scriptsDir, watchOpts);
+  scriptsWatcher.on('change', (p) => { if (isScriptFile(p)) triggerRebuild(p); });
+  scriptsWatcher.on('add', (p) => { if (isScriptFile(p)) triggerRebuild(p); });
 
   // Cleanup on exit
   const cleanup = () => {

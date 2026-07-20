@@ -97,7 +97,12 @@ export default async function images(config) {
 
     // Check cache (key by lowercase path for consistency)
     const cached = cache[relPathLower];
-    if (cached && cached.hash === fileHash) {
+    const cachedOutput = cached && cached.webp
+      ? path.resolve(config.outputDir, cached.webp)
+      : null;
+    // A clean build removes public/assets, so a cache entry alone is not
+    // enough to skip conversion. Rebuild when the cached output is missing.
+    if (cached && cached.hash === fileHash && cachedOutput && await fs.pathExists(cachedOutput)) {
       // Reuse cached entry
       manifest[relPathLower] = {
         original: relPath,

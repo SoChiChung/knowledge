@@ -102,7 +102,19 @@ export default async function build(opts = {}) {
   for (const filename of frontendFiles) {
     const src = path.join(d, filename);
     if (await fs.pathExists(src)) {
-      await fs.copy(src, path.join(buildConfig.outputDir, filename));
+      const dest = path.join(buildConfig.outputDir, filename);
+      await fs.copy(src, dest);
+      if (filename === 'app.js') {
+        let app = await fs.readFile(dest, 'utf8');
+        // The demo embeds sample data; the generated site reads build JSON.
+        app = app.replace('var provider = StaticDataProvider;', 'var provider = JsonDataProvider;');
+        // Encode each slug segment so non-ASCII folders work as static URLs.
+        app = app.replace(
+          "fetch('data/pages/' + s + '.json')",
+          "fetch('data/pages/' + s.split('/').map(encodeURIComponent).join('/') + '.json')"
+        );
+        await fs.writeFile(dest, app, 'utf8');
+      }
     }
   }
 

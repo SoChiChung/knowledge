@@ -1,4 +1,40 @@
-.cache/
-node_modules/
+# Build output
 public/
-demo/
+.cache/
+
+# Dependencies
+node_modules/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Temp files
+*.tmp
+*.temp

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Base</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header__inner">
+        <button class="header__sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+          <span class="header__sidebar-toggle-icon">☰</span>
+        </button>
+        <a class="header__logo" href="#/">Knowledge Base</a>
+        <div class="header__search">
+          <input
+            class="header__search-input"
+            type="text"
+            placeholder="Search articles... (Ctrl+K)"
+            id="searchInput"
+            readonly
+          >
+        </div>
+        <a
+          class="header__github"
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >GitHub</a>
+      </div>
+    </header>
+
+    <!-- Search Palette Overlay -->
+    <div class="search-palette" id="searchPalette">
+      <div class="search-palette__overlay"></div>
+      <div class="search-palette__dialog">
+        <div class="search-palette__input-wrap">
+          <input
+            class="search-palette__input"
+            type="text"
+            placeholder="Search articles..."
+            id="searchPaletteInput"
+          >
+        </div>
+        <div class="search-palette__results" id="searchPaletteResults">
+        </div>
+        <div class="search-palette__footer">
+          <span class="search-palette__hint">↑↓ Navigate</span>
+          <span class="search-palette__hint">↵ Open</span>
+          <span class="search-palette__hint">Esc Close</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="main">
+      <!-- Sidebar -->
+      <aside class="sidebar sidebar--expanded" id="sidebar">
+        <nav class="sidebar__nav">
+          <ul class="sidebar__tree" id="sidebarTree">
+            <!-- Rendered by app.js -->
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <main class="content" id="content">
+        <!-- Rendered by app.js -->
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
