@@ -1,0 +1,54 @@
+{
+  "title": "Python Notes",
+  "slug": "programming/python",
+  "category": "programming",
+  "tags": [
+    "Python",
+    "Programming",
+    "Scripting"
+  ],
+  "type": "page",
+  "cover": null,
+  "github": null,
+  "demo": null,
+  "html": "<h1 id=\"python-notes\" tabindex=\"-1\">Python Notes</h1>\n<p>Python is a high-level, interpreted programming language known for its readability and versatility.</p>\n<h2 id=\"data-structures\" tabindex=\"-1\">Data Structures</h2>\n<h3 id=\"lists\" tabindex=\"-1\">Lists</h3>\n<pre><code class=\"language-python\">fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]\nfruits.append(&quot;orange&quot;)\n# List comprehension\nsquares = [x**2 for x in range(10)]\n</code></pre>\n<h3 id=\"dictionaries\" tabindex=\"-1\">Dictionaries</h3>\n<pre><code class=\"language-python\">user = {&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 30}\nuser[&quot;email&quot;] = &quot;alice@example.com&quot;\n# Dict comprehension\nsquares = {x: x**2 for x in range(5)}\n</code></pre>\n<h3 id=\"sets\" tabindex=\"-1\">Sets</h3>\n<pre><code class=\"language-python\">unique = {1, 2, 3, 3, 4}  # {1, 2, 3, 4}\n</code></pre>\n<h2 id=\"virtual-environments\" tabindex=\"-1\">Virtual Environments</h2>\n<p>Always use virtual environments to isolate project dependencies:</p>\n<pre><code class=\"language-bash\">python -m venv .venv\nsource .venv/bin/activate  # Linux/Mac\n.venv\\Scripts\\activate     # Windows\n</code></pre>\n<h2 id=\"type-hints\" tabindex=\"-1\">Type Hints</h2>\n<p>Python 3.5+ supports type hints for better code documentation and IDE support:</p>\n<pre><code class=\"language-python\">def greet(name: str) -&gt; str:\n    return f&quot;Hello, {name}&quot;\n</code></pre>\n<h2 id=\"popular-libraries\" tabindex=\"-1\">Popular Libraries</h2>\n<ul>\n<li><strong>Requests</strong> — HTTP client</li>\n<li><strong>Pandas</strong> — Data analysis</li>\n<li><strong>Pytest</strong> — Testing framework</li>\n<li><strong>FastAPI</strong> — Web framework</li>\n</ul>\n",
+  "text": "Python Notes\nPython is a high-level, interpreted programming language known for its readability and versatility.\nData Structures\nLists\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.append(\"orange\")\n# List comprehension\nsquares = [x**2 for x in range(10)]\n\nDictionaries\nuser = {\"name\": \"Alice\", \"age\": 30}\nuser[\"email\"] = \"alice@example.com\"\n# Dict comprehension\nsquares = {x: x**2 for x in range(5)}\n\nSets\nunique = {1, 2, 3, 3, 4}  # {1, 2, 3, 4}\n\nVirtual Environments\nAlways use virtual environments to isolate project dependencies:\npython -m venv .venv\nsource .venv/bin/activate  # Linux/Mac\n.venv\\Scripts\\activate     # Windows\n\nType Hints\nPython 3.5+ supports type hints for better code documentation and IDE support:\ndef greet(name: str) -> str:\n    return f\"Hello, {name}\"\n\nPopular Libraries\n\nRequests — HTTP client\nPandas — Data analysis\nPytest — Testing framework\nFastAPI — Web framework",
+  "updatedAt": "2026-07-20",
+  "toc": [
+    {
+      "level": 2,
+      "text": "Data Structures",
+      "anchor": "data-structures"
+    },
+    {
+      "level": 3,
+      "text": "Lists",
+      "anchor": "lists"
+    },
+    {
+      "level": 3,
+      "text": "Dictionaries",
+      "anchor": "dictionaries"
+    },
+    {
+      "level": 3,
+      "text": "Sets",
+      "anchor": "sets"
+    },
+    {
+      "level": 2,
+      "text": "Virtual Environments",
+      "anchor": "virtual-environments"
+    },
+    {
+      "level": 2,
+      "text": "Type Hints",
+      "anchor": "type-hints"
+    },
+    {
+      "level": 2,
+      "text": "Popular Libraries",
+      "anchor": "popular-libraries"
+    }
+  ]
+}

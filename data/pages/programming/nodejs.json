@@ -1,0 +1,44 @@
+{
+  "title": "Node.js Notes",
+  "slug": "programming/nodejs",
+  "category": "programming",
+  "tags": [
+    "Node.js",
+    "JavaScript",
+    "Backend"
+  ],
+  "type": "page",
+  "cover": null,
+  "github": null,
+  "demo": null,
+  "html": "<h1 id=\"nodejs-notes\" tabindex=\"-1\">Node.js Notes</h1>\n<p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It enables server-side JavaScript development.</p>\n<h2 id=\"event-loop\" tabindex=\"-1\">Event Loop</h2>\n<p>The event loop is the heart of Node.js. It allows non-blocking I/O operations despite JavaScript being single-threaded.</p>\n<h3 id=\"phases\" tabindex=\"-1\">Phases</h3>\n<ol>\n<li><strong>Timers</strong> — Execute <code>setTimeout</code> and <code>setInterval</code> callbacks</li>\n<li><strong>Pending callbacks</strong> — Execute I/O callbacks deferred to next loop</li>\n<li><strong>Idle, prepare</strong> — Internal operations</li>\n<li><strong>Poll</strong> — Retrieve new I/O events</li>\n<li><strong>Check</strong> — Execute <code>setImmediate</code> callbacks</li>\n<li><strong>Close callbacks</strong> — Execute close event callbacks</li>\n</ol>\n<h2 id=\"key-modules\" tabindex=\"-1\">Key Modules</h2>\n<ul>\n<li><code>fs</code> — File system operations</li>\n<li><code>path</code> — File path utilities</li>\n<li><code>http</code> / <code>https</code> — HTTP server and client</li>\n<li><code>stream</code> — Streaming data</li>\n<li><code>events</code> — Event emitter pattern</li>\n</ul>\n<h2 id=\"esm-vs-commonjs\" tabindex=\"-1\">ESM vs CommonJS</h2>\n<p>Node.js now fully supports ES Modules (<code>import</code>/<code>export</code>). Set <code>&quot;type&quot;: &quot;module&quot;</code> in <code>package.json</code> or use <code>.mjs</code> extension.</p>\n<h2 id=\"package-management\" tabindex=\"-1\">Package Management</h2>\n<p>Use <code>npm</code> or <code>pnpm</code> for package management. Lock files should always be committed.</p>\n",
+  "text": "Node.js Notes\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It enables server-side JavaScript development.\nEvent Loop\nThe event loop is the heart of Node.js. It allows non-blocking I/O operations despite JavaScript being single-threaded.\nPhases\n\nTimers — Execute setTimeout and setInterval callbacks\nPending callbacks — Execute I/O callbacks deferred to next loop\nIdle, prepare — Internal operations\nPoll — Retrieve new I/O events\nCheck — Execute setImmediate callbacks\nClose callbacks — Execute close event callbacks\n\nKey Modules\n\nfs — File system operations\npath — File path utilities\nhttp / https — HTTP server and client\nstream — Streaming data\nevents — Event emitter pattern\n\nESM vs CommonJS\nNode.js now fully supports ES Modules (import/export). Set \"type\": \"module\" in package.json or use .mjs extension.\nPackage Management\nUse npm or pnpm for package management. Lock files should always be committed.",
+  "updatedAt": "2026-07-20",
+  "toc": [
+    {
+      "level": 2,
+      "text": "Event Loop",
+      "anchor": "event-loop"
+    },
+    {
+      "level": 3,
+      "text": "Phases",
+      "anchor": "phases"
+    },
+    {
+      "level": 2,
+      "text": "Key Modules",
+      "anchor": "key-modules"
+    },
+    {
+      "level": 2,
+      "text": "ESM vs CommonJS",
+      "anchor": "esm-vs-commonjs"
+    },
+    {
+      "level": 2,
+      "text": "Package Management",
+      "anchor": "package-management"
+    }
+  ]
+}

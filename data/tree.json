@@ -1,0 +1,77 @@
+[
+  {
+    "type": "folder",
+    "name": "AI",
+    "slug": "ai",
+    "children": [
+      {
+        "type": "page",
+        "title": "GPT Tips",
+        "slug": "ai/gpt"
+      },
+      {
+        "type": "folder",
+        "name": "LLM",
+        "slug": "ai/llm",
+        "children": [
+          {
+            "type": "page",
+            "title": "Claude Guide",
+            "slug": "ai/llm/claude"
+          },
+          {
+            "type": "page",
+            "title": "Prompt Engineering",
+            "slug": "ai/llm/prompt"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Football",
+    "slug": "football",
+    "children": [
+      {
+        "type": "page",
+        "title": "Arsenal FC",
+        "slug": "football/arsenal"
+      },
+      {
+        "type": "page",
+        "title": "Fantasy Premier League",
+        "slug": "football/fpl"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Programming",
+    "slug": "programming",
+    "children": [
+      {
+        "type": "page",
+        "title": "Node.js Notes",
+        "slug": "programming/nodejs"
+      },
+      {
+        "type": "page",
+        "title": "Python Notes",
+        "slug": "programming/python"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "画图",
+    "slug": "画图",
+    "children": [
+      {
+        "type": "page",
+        "title": "画图prompt",
+        "slug": "画图/paint"
+      }
+    ]
+  }
+]

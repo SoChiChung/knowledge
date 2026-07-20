@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Arsenal FC",
+    "slug": "football/arsenal",
+    "tags": [
+      "Arsenal",
+      "Premier League",
+      "Football"
+    ],
+    "text": "Arsenal FC\nArsenal Football Club is a professional football club based in Islington, North London, England. They compete in the Premier League, the top tier of English football.\nHistory\nFounded in 1886, Arsenal has won 13 league titles, a record 14 FA Cups, and numerous other trophies.\nThe Invincibles\nThe 2003-04 season saw Arsenal go the entire Premier League campaign unbeaten — a feat unmatched in the modern era. The squad, led by manager Arsene Wenger, earned the nickname \"The Invincibles.\"\nEmirates Era\nSince moving to the Emirates Stadium in 2006, the club has entered a new phase of growth under Mikel Arteta, with a focus on young talent and attractive, possession-based football.\nKey Players (2024-25)\n\nBukayo Saka — Homegrown star, elite winger\nMartin Odegaard — Captain and creative heartbeat\nDeclan Rice — Midfield powerhouse\nWilliam Saliba — Defensive rock"
+  },
+  {
+    "title": "Claude Guide",
+    "slug": "ai/llm/claude",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "AI Assistant"
+    ],
+    "text": "Claude Guide\nClaude is Anthropic's AI assistant, designed to be helpful, harmless, and honest. This guide covers practical tips for working with Claude effectively.\nKey Features\n\nLong Context: Claude can process up to 200K tokens in a single prompt\nTool Use: Claude can interact with external tools and APIs\nMultimodal: Claude can analyze images, documents, and code\nConstitutional AI: Trained with safety principles built into the model\n\nEffective Prompting\nBe Specific\nInstead of \"Write about React\", try:\nExplain the React useEffect hook, including:\n- When it runs\n- Cleanup functions\n- Common pitfalls with dependencies\n\nUse System Prompts\nSystem prompts set the overall behavior and constraints for Claude. Place important instructions here rather than in the conversation body.\nCode Generation\nClaude excels at generating and explaining code. When asking for code:\n\nSpecify the language and framework\nDescribe the expected behavior\nMention any constraints (performance, style, dependencies)"
+  },
+  {
+    "title": "Fantasy Premier League",
+    "slug": "football/fpl",
+    "tags": [
+      "FPL",
+      "Fantasy Football",
+      "Strategy"
+    ],
+    "text": "Fantasy Premier League (FPL)\nFantasy Premier League is the official fantasy football game of the English Premier League. Millions of players worldwide compete each season.\nBasic Rules\n\nBudget: £100 million for 15 players\n2 goalkeepers, 5 defenders, 5 midfielders, 3 forwards\n1 free transfer per gameweek\nCaptain scores double points, vice-captain is backup\n\nChip Strategy\n\nChip\nEffect\nBest Use\n\nWildcard\nUnlimited transfers\nOverhaul team\n\nFree Hit\nOne-week team reset\nBlank gameweeks\n\nBench Boost\nBench players score\nDouble gameweeks\n\nTriple Captain\nCaptain × 3\nDouble gameweeks\n\nStats to Watch\nExpected goals (xG), expected assists (xA), and minutes played are key indicators. Don't chase last week's points — look at underlying numbers.\nMini-Leagues\nCreate or join mini-leagues to compete with friends. Head-to-head leagues offer a different challenge from classic scoring."
+  },
+  {
+    "title": "GPT Tips",
+    "slug": "ai/gpt",
+    "tags": [
+      "GPT",
+      "OpenAI",
+      "Tips"
+    ],
+    "text": "GPT Tips\nPractical tips and techniques for getting the most out of GPT models.\nTemperature Settings\n\nTemperature\nBest For\n\n0.0 - 0.3\nCode generation, factual answers\n\n0.3 - 0.7\nGeneral conversation, explanation\n\n0.7 - 1.0\nCreative writing, brainstorming\n\nToken Management\nGPT models have token limits that vary by model. A rough rule of thumb: 1 token ≈ 0.75 words in English.\nCounting Tokens\nUse the tiktoken library to count tokens programmatically before sending requests.\nSystem Messages\nThe system message is the most powerful tool for shaping GPT behavior. Place critical instructions here:\nYou are a senior software engineer reviewing code.\nFocus on:\n- Security vulnerabilities\n- Performance issues\n- Code clarity\nBe concise and provide actionable feedback.\n\nFunction Calling\nWhen using function calling, define clear JSON schemas and include descriptions for every parameter."
+  },
+  {
+    "title": "Node.js Notes",
+    "slug": "programming/nodejs",
+    "tags": [
+      "Node.js",
+      "JavaScript",
+      "Backend"
+    ],
+    "text": "Node.js Notes\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It enables server-side JavaScript development.\nEvent Loop\nThe event loop is the heart of Node.js. It allows non-blocking I/O operations despite JavaScript being single-threaded.\nPhases\n\nTimers — Execute setTimeout and setInterval callbacks\nPending callbacks — Execute I/O callbacks deferred to next loop\nIdle, prepare — Internal operations\nPoll — Retrieve new I/O events\nCheck — Execute setImmediate callbacks\nClose callbacks — Execute close event callbacks\n\nKey Modules\n\nfs — File system operations\npath — File path utilities\nhttp / https — HTTP server and client\nstream — Streaming data\nevents — Event emitter pattern\n\nESM vs CommonJS\nNode.js now fully supports ES Modules (import/export). Set \"type\": \"module\" in package.json or use .mjs extension.\nPackage Management\nUse npm or pnpm for package management. Lock files should always be committed."
+  },
+  {
+    "title": "Prompt Engineering",
+    "slug": "ai/llm/prompt",
+    "tags": [
+      "GPT",
+      "Claude",
+      "LLM"
+    ],
+    "text": "Prompt Engineering\nPrompt engineering is the practice of designing and optimizing input prompts for large language models (LLMs) to achieve desired outputs. It has become an essential skill for anyone working with AI.\nCore Principles\n\nClarity: Be specific and unambiguous in your instructions\nContext: Provide relevant background information for the task\nConstraints: Set clear boundaries for the expected response\nExamples: Use few-shot prompting to guide output format\n\nChain-of-Thought\nChain-of-thought (CoT) prompting encourages the model to reason step by step before arriving at a final answer. This technique dramatically improves performance on complex reasoning tasks.\nQ: A bakery sold 120 loaves of bread on Monday.\nIt sold 30% more on Tuesday. How many loaves\nwere sold in total?\n\nLet's solve this step by step:\n1. Monday sales: 120 loaves\n2. Tuesday increase: 120 * 0.30 = 36 loaves\n3. Tuesday sales: 120 + 36 = 156 loaves\n4. Total: 120 + 156 = 276 loaves\n\nBest Practices\n\nStart with a clear system message\nUse delimiters to separate sections\nSpecify the desired output format\nIterate and refine based on results"
+  },
+  {
+    "title": "Python Notes",
+    "slug": "programming/python",
+    "tags": [
+      "Python",
+      "Programming",
+      "Scripting"
+    ],
+    "text": "Python Notes\nPython is a high-level, interpreted programming language known for its readability and versatility.\nData Structures\nLists\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.append(\"orange\")\n# List comprehension\nsquares = [x**2 for x in range(10)]\n\nDictionaries\nuser = {\"name\": \"Alice\", \"age\": 30}\nuser[\"email\"] = \"alice@example.com\"\n# Dict comprehension\nsquares = {x: x**2 for x in range(5)}\n\nSets\nunique = {1, 2, 3, 3, 4}  # {1, 2, 3, 4}\n\nVirtual Environments\nAlways use virtual environments to isolate project dependencies:\npython -m venv .venv\nsource .venv/bin/activate  # Linux/Mac\n.venv\\Scripts\\activate     # Windows\n\nType Hints\nPython 3.5+ supports type hints for better code documentation and IDE support:\ndef greet(name: str) -> str:\n    return f\"Hello, {name}\"\n\nPopular Libraries\n\nRequests — HTTP client\nPandas — Data analysis\nPytest — Testing framework\nFastAPI — Web framework"
+  },
+  {
+    "title": "画图prompt",
+    "slug": "画图/paint",
+    "tags": [
+      "画图"
+    ],
+    "text": "黑礁风格\n高级日漫黑帮写实风格（Black Lagoon inspired），暗黑都市犯罪美学，成熟青年漫画风，硬朗锐利的赛璐璐上色，厚重阴影，大面积纯黑块塑造体积感，极强的黑白对比，高反差电影级光影，低饱和配色，以黑、深灰、暗红为主色，少量冷蓝点缀。人物拥有冷漠、危险、压迫感的神情，略微仰拍英雄视角，广角镜头，夸张透视，近景手部放大，低机位构图。背景采用极简设计，以巨大红色字体、工业都市元素、废弃建筑、霓虹灯、集装箱码头、地下停车场或黑帮城市为主，大面积负空间。整体充满90年代OVA动画质感，枪战电影氛围，成熟、暴力、冷酷、叛逆，具有漫画封面视觉冲击力。"
+  }
+]

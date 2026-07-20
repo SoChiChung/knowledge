@@ -1,0 +1,39 @@
+{
+  "title": "Arsenal FC",
+  "slug": "football/arsenal",
+  "category": "football",
+  "tags": [
+    "Arsenal",
+    "Premier League",
+    "Football"
+  ],
+  "type": "page",
+  "cover": null,
+  "github": null,
+  "demo": null,
+  "html": "<h1 id=\"arsenal-fc\" tabindex=\"-1\">Arsenal FC</h1>\n<p>Arsenal Football Club is a professional football club based in Islington, North London, England. They compete in the Premier League, the top tier of English football.</p>\n<h2 id=\"history\" tabindex=\"-1\">History</h2>\n<p>Founded in 1886, Arsenal has won 13 league titles, a record 14 FA Cups, and numerous other trophies.</p>\n<h2 id=\"the-invincibles\" tabindex=\"-1\">The Invincibles</h2>\n<p>The 2003-04 season saw Arsenal go the entire Premier League campaign unbeaten — a feat unmatched in the modern era. The squad, led by manager Arsene Wenger, earned the nickname &quot;The Invincibles.&quot;</p>\n<h2 id=\"emirates-era\" tabindex=\"-1\">Emirates Era</h2>\n<p>Since moving to the Emirates Stadium in 2006, the club has entered a new phase of growth under Mikel Arteta, with a focus on young talent and attractive, possession-based football.</p>\n<h2 id=\"key-players-2024-25\" tabindex=\"-1\">Key Players (2024-25)</h2>\n<ul>\n<li><strong>Bukayo Saka</strong> — Homegrown star, elite winger</li>\n<li><strong>Martin Odegaard</strong> — Captain and creative heartbeat</li>\n<li><strong>Declan Rice</strong> — Midfield powerhouse</li>\n<li><strong>William Saliba</strong> — Defensive rock</li>\n</ul>\n",
+  "text": "Arsenal FC\nArsenal Football Club is a professional football club based in Islington, North London, England. They compete in the Premier League, the top tier of English football.\nHistory\nFounded in 1886, Arsenal has won 13 league titles, a record 14 FA Cups, and numerous other trophies.\nThe Invincibles\nThe 2003-04 season saw Arsenal go the entire Premier League campaign unbeaten — a feat unmatched in the modern era. The squad, led by manager Arsene Wenger, earned the nickname \"The Invincibles.\"\nEmirates Era\nSince moving to the Emirates Stadium in 2006, the club has entered a new phase of growth under Mikel Arteta, with a focus on young talent and attractive, possession-based football.\nKey Players (2024-25)\n\nBukayo Saka — Homegrown star, elite winger\nMartin Odegaard — Captain and creative heartbeat\nDeclan Rice — Midfield powerhouse\nWilliam Saliba — Defensive rock",
+  "updatedAt": "2026-07-20",
+  "toc": [
+    {
+      "level": 2,
+      "text": "History",
+      "anchor": "history"
+    },
+    {
+      "level": 2,
+      "text": "The Invincibles",
+      "anchor": "the-invincibles"
+    },
+    {
+      "level": 2,
+      "text": "Emirates Era",
+      "anchor": "emirates-era"
+    },
+    {
+      "level": 2,
+      "text": "Key Players (2024-25)",
+      "anchor": "key-players-2024-25"
+    }
+  ]
+}

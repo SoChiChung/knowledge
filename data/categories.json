@@ -1,0 +1,33 @@
+[
+  {
+    "name": "AI",
+    "slug": "ai",
+    "count": 3,
+    "children": [
+      {
+        "name": "LLM",
+        "slug": "ai/llm",
+        "count": 2,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "Football",
+    "slug": "football",
+    "count": 2,
+    "children": []
+  },
+  {
+    "name": "Programming",
+    "slug": "programming",
+    "count": 2,
+    "children": []
+  },
+  {
+    "name": "画图",
+    "slug": "画图",
+    "count": 1,
+    "children": []
+  }
+]
