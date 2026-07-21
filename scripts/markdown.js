@@ -96,7 +96,7 @@ function replaceImagePaths(html, manifest, pageSlug) {
 
   // Replace image sources: match src="...filename" case-insensitively
   for (const [origFile, webpPath] of Object.entries(fileMap)) {
-    const webpSrc = '/' + webpPath;
+    const webpSrc = webpPath;
 
     // Regex to match src="...filename" with any case
     const srcRegex = new RegExp(
@@ -182,7 +182,7 @@ async function processFile(filePath, knowledgeDir, pagesOutputDir, manifest) {
     // Lookup cover in manifest (both slug and manifest keys are lowercase)
     const coverKey = slug + '/' + frontMatter.cover.toLowerCase();
     if (manifest[coverKey]) {
-      cover = '/' + manifest[coverKey].webp;
+      cover = manifest[coverKey].webp;
     } else {
       cover = frontMatter.cover; // keep as-is if not in manifest
     }
@@ -193,7 +193,7 @@ async function processFile(filePath, knowledgeDir, pagesOutputDir, manifest) {
     for (const cf of coverFiles) {
       const ck = slug + '/' + cf;
       if (manifest[ck]) {
-        cover = '/' + manifest[ck].webp;
+        cover = manifest[ck].webp;
         break;
       }
     }

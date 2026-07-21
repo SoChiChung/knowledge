@@ -31,6 +31,17 @@ import config from './config.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
 
+function normalizeBase(base) {
+  if (!base || base === '/') return '';
+  return '/' + String(base).replace(/^\/+|\/+$/g, '');
+}
+
+function withBase(base, assetPath) {
+  const normalizedBase = normalizeBase(base);
+  const cleanPath = String(assetPath).replace(/^\/+/, '');
+  return normalizedBase ? normalizedBase + '/' + cleanPath : cleanPath;
+}
+
 // Resolve paths from config
 export const buildConfig = {
   rootDir,
@@ -79,6 +90,7 @@ export default async function build(opts = {}) {
     name: config.siteName,
     description: config.siteDescription,
     github: config.github,
+    base: normalizeBase(config.base),
     hero: config.hero
   };
   await fs.writeJson(path.join(buildConfig.dataDir, 'site.json'), siteJson, { spaces: 2 });
@@ -104,6 +116,18 @@ export default async function build(opts = {}) {
     if (await fs.pathExists(src)) {
       const dest = path.join(buildConfig.outputDir, filename);
       await fs.copy(src, dest);
+      if (filename === 'index.html') {
+        let html = await fs.readFile(dest, 'utf8');
+        const base = normalizeBase(config.base);
+        html = html
+          .replace('href="style.css"', `href="${withBase(base, 'style.css')}"`)
+          .replace('src="app.js"', `src="${withBase(base, 'app.js')}"`)
+          .replace(
+            '</head>',
+            `  <script>window.__KB_BASE__ = ${JSON.stringify(base)};</script>\n</head>`
+          );
+        await fs.writeFile(dest, html, 'utf8');
+      }
       if (filename === 'app.js') {
         let app = await fs.readFile(dest, 'utf8');
         // The demo embeds sample data; the generated site reads build JSON.
