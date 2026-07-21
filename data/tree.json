@@ -1,35 +1,6 @@
 [
   {
     "type": "folder",
-    "name": "AI",
-    "slug": "ai",
-    "children": [
-      {
-        "type": "page",
-        "title": "GPT Tips",
-        "slug": "ai/gpt"
-      },
-      {
-        "type": "folder",
-        "name": "LLM",
-        "slug": "ai/llm",
-        "children": [
-          {
-            "type": "page",
-            "title": "Claude Guide",
-            "slug": "ai/llm/claude"
-          },
-          {
-            "type": "page",
-            "title": "Prompt Engineering",
-            "slug": "ai/llm/prompt"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "folder",
     "name": "Football",
     "slug": "football",
     "children": [
@@ -59,6 +30,18 @@
         "type": "page",
         "title": "Python Notes",
         "slug": "programming/python"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "做菜",
+    "slug": "做菜",
+    "children": [
+      {
+        "type": "page",
+        "title": "热菜大全",
+        "slug": "做菜/热菜"
       }
     ]
   },

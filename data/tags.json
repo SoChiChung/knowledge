@@ -1,21 +1,5 @@
 [
   {
-    "name": "Claude",
-    "count": 2
-  },
-  {
-    "name": "GPT",
-    "count": 2
-  },
-  {
-    "name": "AI Assistant",
-    "count": 1
-  },
-  {
-    "name": "Anthropic",
-    "count": 1
-  },
-  {
     "name": "Arsenal",
     "count": 1
   },
@@ -40,15 +24,7 @@
     "count": 1
   },
   {
-    "name": "LLM",
-    "count": 1
-  },
-  {
     "name": "Node.js",
-    "count": 1
-  },
-  {
-    "name": "OpenAI",
     "count": 1
   },
   {
@@ -72,7 +48,7 @@
     "count": 1
   },
   {
-    "name": "Tips",
+    "name": "做饭",
     "count": 1
   },
   {

@@ -10,16 +10,6 @@
     "text": "Arsenal FC\nArsenal Football Club is a professional football club based in Islington, North London, England. They compete in the Premier League, the top tier of English football.\nHistory\nFounded in 1886, Arsenal has won 13 league titles, a record 14 FA Cups, and numerous other trophies.\nThe Invincibles\nThe 2003-04 season saw Arsenal go the entire Premier League campaign unbeaten — a feat unmatched in the modern era. The squad, led by manager Arsene Wenger, earned the nickname \"The Invincibles.\"\nEmirates Era\nSince moving to the Emirates Stadium in 2006, the club has entered a new phase of growth under Mikel Arteta, with a focus on young talent and attractive, possession-based football.\nKey Players (2024-25)\n\nBukayo Saka — Homegrown star, elite winger\nMartin Odegaard — Captain and creative heartbeat\nDeclan Rice — Midfield powerhouse\nWilliam Saliba — Defensive rock"
   },
   {
-    "title": "Claude Guide",
-    "slug": "ai/llm/claude",
-    "tags": [
-      "Claude",
-      "Anthropic",
-      "AI Assistant"
-    ],
-    "text": "Claude Guide\nClaude is Anthropic's AI assistant, designed to be helpful, harmless, and honest. This guide covers practical tips for working with Claude effectively.\nKey Features\n\nLong Context: Claude can process up to 200K tokens in a single prompt\nTool Use: Claude can interact with external tools and APIs\nMultimodal: Claude can analyze images, documents, and code\nConstitutional AI: Trained with safety principles built into the model\n\nEffective Prompting\nBe Specific\nInstead of \"Write about React\", try:\nExplain the React useEffect hook, including:\n- When it runs\n- Cleanup functions\n- Common pitfalls with dependencies\n\nUse System Prompts\nSystem prompts set the overall behavior and constraints for Claude. Place important instructions here rather than in the conversation body.\nCode Generation\nClaude excels at generating and explaining code. When asking for code:\n\nSpecify the language and framework\nDescribe the expected behavior\nMention any constraints (performance, style, dependencies)"
-  },
-  {
     "title": "Fantasy Premier League",
     "slug": "football/fpl",
     "tags": [
@@ -28,16 +18,6 @@
       "Strategy"
     ],
     "text": "Fantasy Premier League (FPL)\nFantasy Premier League is the official fantasy football game of the English Premier League. Millions of players worldwide compete each season.\nBasic Rules\n\nBudget: £100 million for 15 players\n2 goalkeepers, 5 defenders, 5 midfielders, 3 forwards\n1 free transfer per gameweek\nCaptain scores double points, vice-captain is backup\n\nChip Strategy\n\nChip\nEffect\nBest Use\n\nWildcard\nUnlimited transfers\nOverhaul team\n\nFree Hit\nOne-week team reset\nBlank gameweeks\n\nBench Boost\nBench players score\nDouble gameweeks\n\nTriple Captain\nCaptain × 3\nDouble gameweeks\n\nStats to Watch\nExpected goals (xG), expected assists (xA), and minutes played are key indicators. Don't chase last week's points — look at underlying numbers.\nMini-Leagues\nCreate or join mini-leagues to compete with friends. Head-to-head leagues offer a different challenge from classic scoring."
-  },
-  {
-    "title": "GPT Tips",
-    "slug": "ai/gpt",
-    "tags": [
-      "GPT",
-      "OpenAI",
-      "Tips"
-    ],
-    "text": "GPT Tips\nPractical tips and techniques for getting the most out of GPT models.\nTemperature Settings\n\nTemperature\nBest For\n\n0.0 - 0.3\nCode generation, factual answers\n\n0.3 - 0.7\nGeneral conversation, explanation\n\n0.7 - 1.0\nCreative writing, brainstorming\n\nToken Management\nGPT models have token limits that vary by model. A rough rule of thumb: 1 token ≈ 0.75 words in English.\nCounting Tokens\nUse the tiktoken library to count tokens programmatically before sending requests.\nSystem Messages\nThe system message is the most powerful tool for shaping GPT behavior. Place critical instructions here:\nYou are a senior software engineer reviewing code.\nFocus on:\n- Security vulnerabilities\n- Performance issues\n- Code clarity\nBe concise and provide actionable feedback.\n\nFunction Calling\nWhen using function calling, define clear JSON schemas and include descriptions for every parameter."
   },
   {
     "title": "Node.js Notes",
@@ -50,16 +30,6 @@
     "text": "Node.js Notes\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It enables server-side JavaScript development.\nEvent Loop\nThe event loop is the heart of Node.js. It allows non-blocking I/O operations despite JavaScript being single-threaded.\nPhases\n\nTimers — Execute setTimeout and setInterval callbacks\nPending callbacks — Execute I/O callbacks deferred to next loop\nIdle, prepare — Internal operations\nPoll — Retrieve new I/O events\nCheck — Execute setImmediate callbacks\nClose callbacks — Execute close event callbacks\n\nKey Modules\n\nfs — File system operations\npath — File path utilities\nhttp / https — HTTP server and client\nstream — Streaming data\nevents — Event emitter pattern\n\nESM vs CommonJS\nNode.js now fully supports ES Modules (import/export). Set \"type\": \"module\" in package.json or use .mjs extension.\nPackage Management\nUse npm or pnpm for package management. Lock files should always be committed."
   },
   {
-    "title": "Prompt Engineering",
-    "slug": "ai/llm/prompt",
-    "tags": [
-      "GPT",
-      "Claude",
-      "LLM"
-    ],
-    "text": "Prompt Engineering\nPrompt engineering is the practice of designing and optimizing input prompts for large language models (LLMs) to achieve desired outputs. It has become an essential skill for anyone working with AI.\nCore Principles\n\nClarity: Be specific and unambiguous in your instructions\nContext: Provide relevant background information for the task\nConstraints: Set clear boundaries for the expected response\nExamples: Use few-shot prompting to guide output format\n\nChain-of-Thought\nChain-of-thought (CoT) prompting encourages the model to reason step by step before arriving at a final answer. This technique dramatically improves performance on complex reasoning tasks.\nQ: A bakery sold 120 loaves of bread on Monday.\nIt sold 30% more on Tuesday. How many loaves\nwere sold in total?\n\nLet's solve this step by step:\n1. Monday sales: 120 loaves\n2. Tuesday increase: 120 * 0.30 = 36 loaves\n3. Tuesday sales: 120 + 36 = 156 loaves\n4. Total: 120 + 156 = 276 loaves\n\nBest Practices\n\nStart with a clear system message\nUse delimiters to separate sections\nSpecify the desired output format\nIterate and refine based on results"
-  },
-  {
     "title": "Python Notes",
     "slug": "programming/python",
     "tags": [
@@ -68,6 +38,14 @@
       "Scripting"
     ],
     "text": "Python Notes\nPython is a high-level, interpreted programming language known for its readability and versatility.\nData Structures\nLists\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.append(\"orange\")\n# List comprehension\nsquares = [x**2 for x in range(10)]\n\nDictionaries\nuser = {\"name\": \"Alice\", \"age\": 30}\nuser[\"email\"] = \"alice@example.com\"\n# Dict comprehension\nsquares = {x: x**2 for x in range(5)}\n\nSets\nunique = {1, 2, 3, 3, 4}  # {1, 2, 3, 4}\n\nVirtual Environments\nAlways use virtual environments to isolate project dependencies:\npython -m venv .venv\nsource .venv/bin/activate  # Linux/Mac\n.venv\\Scripts\\activate     # Windows\n\nType Hints\nPython 3.5+ supports type hints for better code documentation and IDE support:\ndef greet(name: str) -> str:\n    return f\"Hello, {name}\"\n\nPopular Libraries\n\nRequests — HTTP client\nPandas — Data analysis\nPytest — Testing framework\nFastAPI — Web framework"
+  },
+  {
+    "title": "热菜大全",
+    "slug": "做菜/热菜",
+    "tags": [
+      "做饭"
+    ],
+    "text": "热菜大全\n窝蛋香菇肉碎西洋菜\n制作步骤\n\n预处理食材：西洋菜去掉老梗、黄叶，清水浸泡冲洗去除涩味；干香菇温水泡发，挤干水分切成小丁；猪肉剁成肉碎；生姜切丝、胡萝卜切小丁备用。\n煸炒底料：锅中倒入少许食用油，下姜丝、香菇丁小火翻炒，炒出香菇鲜香，再倒入肉碎，中火翻炒至肉碎完全散开、变色。\n熬煮底汤：放入胡萝卜丁翻炒片刻，加入足量清水，开大火烧至沸腾。\n烫煮西洋菜：水开后放入西洋菜，滚煮1-2分钟至菜叶变软。\n基础调味：放入适量食盐、鸡粉或松鲜鲜搅拌均匀。\n窝蛋焖制：调至最小火，在汤面空位打入完整鸡蛋，不要搅动，盖上锅盖焖至蛋清凝固，想要溏心蛋黄可缩短焖煮时间。\n增香出锅：淋入蒜头油拌匀，既可直接喝汤，也能搭配面条食用。\n\n食材原料\n\n西洋菜：300g\n猪肉碎：150g\n干香菇：3～4朵\n鸡蛋：1个\n生姜：少许\n胡萝卜：少量\n蒜头油、食盐、鸡粉（松鲜鲜）、食用油：适量\n\n素材来源\n视频链接：https://www.douyin.com/video/7224798280482426150/search/窝蛋西洋菜?aid=3d28591c-4a79-457b-90f9-c850d0b18301&modal_id=7186536385824689442&type=general\n芥末虾\n制作步骤\n\n鲜虾剪去虾须、虾头尖刺，开背去除虾线，洗净后沥干表面水分。\n腌制虾肉：虾中加入盐、鸡蛋黄、胡椒粉、料酒、干淀粉抓拌均匀，腌制10分钟入味。\n锅中倒油烧至六成油温，下入腌好的虾，炸至外壳金黄酥脆后捞出控油。\n调芥末酱汁：碗中放入沙拉酱、黄芥末、炼乳、蜂蜜芥末酱，充分搅拌混合顺滑。\n将炸好的虾倒入酱汁内翻拌，让每只虾均匀裹满酱汁即可装盘。\n\n食材原料\n\n大虾：300g\n鸡蛋黄：1个\n沙拉酱：4勺\n黄芥末：适量\n炼乳：1勺\n蜂蜜芥末酱：半勺\n玉米干淀粉：适量\n料酒、食盐、白胡椒粉、食用油：适量\n\n素材来源\n图文链接：http://xhslink.com/o/81YCZwYP7M2"
   },
   {
     "title": "画图prompt",
