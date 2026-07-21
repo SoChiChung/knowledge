@@ -2,6 +2,7 @@
   "name": "Knowledge Base",
   "description": "Personal knowledge base powered by Markdown",
   "github": "https://github.com",
+  "base": "",
   "hero": {
     "title": "Knowledge Base",
     "subtitle": "Personal notes, thoughts, and references.",

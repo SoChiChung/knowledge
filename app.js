@@ -32,6 +32,7 @@ var STATIC_SITE = {
   name: "Knowledge Base",
   description: "Personal knowledge base powered by Markdown",
   github: "https://github.com",
+  base: "",
   hero: {
     title: "Knowledge Base",
     subtitle: "Personal notes, thoughts, and references.",
@@ -399,6 +400,60 @@ var STATIC_SEARCH = Object.values(STATIC_PAGES).map(function (p) {
 
 
 /* ================================================================
+   Runtime URL helpers
+   ================================================================ */
+
+function normalizeBase(base) {
+  if (!base || base === '/') return '';
+  return '/' + String(base).replace(/^\/+|\/+$/g, '');
+}
+
+var AppConfig = {
+  base: normalizeBase(window.__KB_BASE__ || STATIC_SITE.base || '')
+};
+
+function withBase(assetPath) {
+  if (!assetPath) return assetPath;
+  if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(assetPath)) return assetPath;
+  var cleanPath = String(assetPath).replace(/^\/+/, '');
+  return AppConfig.base ? AppConfig.base + '/' + cleanPath : cleanPath;
+}
+
+function resolveStaticUrls(root) {
+  if (!root) return;
+
+  var urlAttrs = [
+    ['img', 'src'],
+    ['source', 'src'],
+    ['video', 'src'],
+    ['video', 'poster'],
+    ['audio', 'src']
+  ];
+
+  for (var i = 0; i < urlAttrs.length; i++) {
+    var selector = urlAttrs[i][0];
+    var attr = urlAttrs[i][1];
+    var nodes = root.querySelectorAll(selector + '[' + attr + ']');
+    for (var n = 0; n < nodes.length; n++) {
+      nodes[n].setAttribute(attr, withBase(nodes[n].getAttribute(attr)));
+    }
+  }
+
+  var srcsetNodes = root.querySelectorAll('[srcset]');
+  for (var s = 0; s < srcsetNodes.length; s++) {
+    var srcset = srcsetNodes[s].getAttribute('srcset');
+    srcsetNodes[s].setAttribute('srcset', srcset.split(',').map(function (part) {
+      var trimmed = part.trim();
+      if (!trimmed) return trimmed;
+      var pieces = trimmed.split(/\s+/);
+      pieces[0] = withBase(pieces[0]);
+      return pieces.join(' ');
+    }).join(', '));
+  }
+}
+
+
+/* ================================================================
    2. DataProvider — abstract data source layer
    ================================================================ */
 
@@ -421,18 +476,18 @@ function parse(response) {
 }
 
 var JsonDataProvider = {
-  getSite:         function () { return fetch('data/site.json').then(parse); },
-  getTree:         function () { return fetch('data/tree.json').then(parse); },
+  getSite:         function () { return fetch(withBase('data/site.json')).then(parse); },
+  getTree:         function () { return fetch(withBase('data/tree.json')).then(parse); },
   getPage:         function (s) {
     var normalizedSlug = s.split('/').map(function (part) {
       try { return decodeURIComponent(part); } catch (e) { return part; }
     });
-    return fetch('data/pages/' + normalizedSlug.map(encodeURIComponent).join('/') + '.json').then(parse);
+    return fetch(withBase('data/pages/' + normalizedSlug.map(encodeURIComponent).join('/') + '.json')).then(parse);
   },
-  getSearchIndex:  function () { return fetch('data/search.json').then(parse); },
-  getRecent:       function () { return fetch('data/recent.json').then(parse); },
-  getCategories:   function () { return fetch('data/categories.json').then(parse); },
-  getTags:         function () { return fetch('data/tags.json').then(parse); }
+  getSearchIndex:  function () { return fetch(withBase('data/search.json')).then(parse); },
+  getRecent:       function () { return fetch(withBase('data/recent.json')).then(parse); },
+  getCategories:   function () { return fetch(withBase('data/categories.json')).then(parse); },
+  getTags:         function () { return fetch(withBase('data/tags.json')).then(parse); }
 };
 var provider = JsonDataProvider;
 
@@ -447,6 +502,9 @@ var Repository = {
   getSite: function () {
     if (this._cache.site) return Promise.resolve(this._cache.site);
     return provider.getSite().then(function (d) {
+      if (d && typeof d.base !== 'undefined') {
+        AppConfig.base = normalizeBase(d.base);
+      }
       this._cache.site = d;
       return d;
     }.bind(this));
@@ -635,7 +693,7 @@ function renderArticle(containerId, page) {
     var coverDiv = document.createElement('div');
     coverDiv.className = 'article__cover';
     var coverImg = document.createElement('img');
-    coverImg.src = page.cover;
+    coverImg.src = withBase(page.cover);
     coverImg.alt = page.title;
     coverDiv.appendChild(coverImg);
     article.appendChild(coverDiv);
@@ -676,6 +734,7 @@ function renderArticle(containerId, page) {
   var body = document.createElement('div');
   body.className = 'article__body';
   body.innerHTML = page.html;
+  resolveStaticUrls(body);
   article.appendChild(body);
 
   wrapper.appendChild(article);
