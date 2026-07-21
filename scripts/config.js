@@ -22,9 +22,9 @@ export default {
 
   // 首页 Hero（写入 data/site.json）
   hero: {
-    title: "Knowledge Base",
-    subtitle: "Personal notes, thoughts, and references.",
-    cover: null            // Hero 背景图路径 (相对于 knowledge/，如 "hero-bg.png")
+    title: "每一条笔记\n都在帮助\n下一次思考。",
+    subtitle: "记录、整理、沉淀，每一次思考都值得被再次翻阅\r\n把零散的知识，整理成可以反复阅读的答案。",
+    cover: "./hero-bg.png"            // Hero 背景图路径 (相对于 knowledge/，如 "hero-bg.png")
   },
 
   // GitHub
