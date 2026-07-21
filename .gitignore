@@ -1,6 +1,7 @@
 # Build output
 public/
 .cache/
+demo/
 
 # Dependencies
 node_modules/
