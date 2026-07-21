@@ -1,15 +1,5 @@
 [
   {
-    "title": "Arsenal FC",
-    "slug": "football/arsenal",
-    "updatedAt": "2026-07-21"
-  },
-  {
-    "title": "Fantasy Premier League",
-    "slug": "football/fpl",
-    "updatedAt": "2026-07-21"
-  },
-  {
     "title": "Node.js Notes",
     "slug": "programming/nodejs",
     "updatedAt": "2026-07-21"
@@ -17,6 +7,16 @@
   {
     "title": "Python Notes",
     "slug": "programming/python",
+    "updatedAt": "2026-07-21"
+  },
+  {
+    "title": "Arsenal FC",
+    "slug": "football/arsenal",
+    "updatedAt": "2026-07-21"
+  },
+  {
+    "title": "Fantasy Premier League",
+    "slug": "football/fpl",
     "updatedAt": "2026-07-21"
   },
   {
