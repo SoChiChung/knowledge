@@ -1,4 +1,18 @@
 {
+  "画图/paint/assets/ronaldo.png": {
+    "original": "画图/paint/assets/Ronaldo.png",
+    "webp": "assets/画图/paint/assets/ronaldo.webp",
+    "width": 941,
+    "hash": "0dfda223970d",
+    "size": 151518
+  },
+  "画图/paint/assets/messivsyamal.png": {
+    "original": "画图/paint/assets/messivsyamal.png",
+    "webp": "assets/画图/paint/assets/messivsyamal.webp",
+    "width": 1086,
+    "hash": "332a80831ed6",
+    "size": 137822
+  },
   "画图/paint/assets/yamal.png": {
     "original": "画图/paint/assets/yamal.png",
     "webp": "assets/画图/paint/assets/yamal.webp",
