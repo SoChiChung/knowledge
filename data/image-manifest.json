@@ -1,4 +1,11 @@
 {
+  "hero-bg.png": {
+    "original": "hero-bg.png",
+    "webp": "assets/hero-bg.webp",
+    "width": 1200,
+    "hash": "3b53507abab4",
+    "size": 106922
+  },
   "画图/paint/assets/ronaldo.png": {
     "original": "画图/paint/assets/Ronaldo.png",
     "webp": "assets/画图/paint/assets/ronaldo.webp",

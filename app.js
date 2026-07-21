@@ -824,7 +824,7 @@ function renderHome(containerId, recent, categories, tags, hero) {
   recentSection.className = 'home__section';
   var recentTitle = document.createElement('h2');
   recentTitle.className = 'home__section-title';
-  recentTitle.textContent = 'Recent Updates';
+  recentTitle.textContent = 'Recent Updates 最近更新';
   recentSection.appendChild(recentTitle);
 
   var recentList = document.createElement('ul');
@@ -851,7 +851,7 @@ function renderHome(containerId, recent, categories, tags, hero) {
   catSection.className = 'home__section';
   var catTitle = document.createElement('h2');
   catTitle.className = 'home__section-title';
-  catTitle.textContent = 'Categories';
+  catTitle.textContent = 'Categories 目录';
   catSection.appendChild(catTitle);
 
   for (var c = 0; c < categories.length; c++) {

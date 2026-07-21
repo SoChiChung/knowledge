@@ -4,8 +4,8 @@
   "github": "https://github.com",
   "base": "",
   "hero": {
-    "title": "Knowledge Base",
-    "subtitle": "Personal notes, thoughts, and references.",
-    "cover": null
+    "title": "每一条笔记\n都在帮助\n下一次思考。",
+    "subtitle": "记录、整理、沉淀，每一次思考都值得被再次翻阅\r\n把零散的知识，整理成可以反复阅读的答案。",
+    "cover": "./hero-bg.png"
   }
 }
