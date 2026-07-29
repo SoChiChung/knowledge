@@ -1,43 +1,12 @@
 [
   {
-    "title": "Arsenal FC",
-    "slug": "football/arsenal",
+    "title": "汉化prompt",
+    "slug": "prompt/常用prompt模版",
     "tags": [
-      "Arsenal",
-      "Premier League",
-      "Football"
+      "汉化",
+      "小红书"
     ],
-    "text": "Arsenal FC\nArsenal Football Club is a professional football club based in Islington, North London, England. They compete in the Premier League, the top tier of English football.\nHistory\nFounded in 1886, Arsenal has won 13 league titles, a record 14 FA Cups, and numerous other trophies.\nThe Invincibles\nThe 2003-04 season saw Arsenal go the entire Premier League campaign unbeaten — a feat unmatched in the modern era. The squad, led by manager Arsene Wenger, earned the nickname \"The Invincibles.\"\nEmirates Era\nSince moving to the Emirates Stadium in 2006, the club has entered a new phase of growth under Mikel Arteta, with a focus on young talent and attractive, possession-based football.\nKey Players (2024-25)\n\nBukayo Saka — Homegrown star, elite winger\nMartin Odegaard — Captain and creative heartbeat\nDeclan Rice — Midfield powerhouse\nWilliam Saliba — Defensive rock"
-  },
-  {
-    "title": "Fantasy Premier League",
-    "slug": "football/fpl",
-    "tags": [
-      "FPL",
-      "Fantasy Football",
-      "Strategy"
-    ],
-    "text": "Fantasy Premier League (FPL)\nFantasy Premier League is the official fantasy football game of the English Premier League. Millions of players worldwide compete each season.\nBasic Rules\n\nBudget: £100 million for 15 players\n2 goalkeepers, 5 defenders, 5 midfielders, 3 forwards\n1 free transfer per gameweek\nCaptain scores double points, vice-captain is backup\n\nChip Strategy\n\nChip\nEffect\nBest Use\n\nWildcard\nUnlimited transfers\nOverhaul team\n\nFree Hit\nOne-week team reset\nBlank gameweeks\n\nBench Boost\nBench players score\nDouble gameweeks\n\nTriple Captain\nCaptain × 3\nDouble gameweeks\n\nStats to Watch\nExpected goals (xG), expected assists (xA), and minutes played are key indicators. Don't chase last week's points — look at underlying numbers.\nMini-Leagues\nCreate or join mini-leagues to compete with friends. Head-to-head leagues offer a different challenge from classic scoring."
-  },
-  {
-    "title": "Node.js Notes",
-    "slug": "programming/nodejs",
-    "tags": [
-      "Node.js",
-      "JavaScript",
-      "Backend"
-    ],
-    "text": "Node.js Notes\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It enables server-side JavaScript development.\nEvent Loop\nThe event loop is the heart of Node.js. It allows non-blocking I/O operations despite JavaScript being single-threaded.\nPhases\n\nTimers — Execute setTimeout and setInterval callbacks\nPending callbacks — Execute I/O callbacks deferred to next loop\nIdle, prepare — Internal operations\nPoll — Retrieve new I/O events\nCheck — Execute setImmediate callbacks\nClose callbacks — Execute close event callbacks\n\nKey Modules\n\nfs — File system operations\npath — File path utilities\nhttp / https — HTTP server and client\nstream — Streaming data\nevents — Event emitter pattern\n\nESM vs CommonJS\nNode.js now fully supports ES Modules (import/export). Set \"type\": \"module\" in package.json or use .mjs extension.\nPackage Management\nUse npm or pnpm for package management. Lock files should always be committed."
-  },
-  {
-    "title": "Python Notes",
-    "slug": "programming/python",
-    "tags": [
-      "Python",
-      "Programming",
-      "Scripting"
-    ],
-    "text": "Python Notes\nPython is a high-level, interpreted programming language known for its readability and versatility.\nData Structures\nLists\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.append(\"orange\")\n# List comprehension\nsquares = [x**2 for x in range(10)]\n\nDictionaries\nuser = {\"name\": \"Alice\", \"age\": 30}\nuser[\"email\"] = \"alice@example.com\"\n# Dict comprehension\nsquares = {x: x**2 for x in range(5)}\n\nSets\nunique = {1, 2, 3, 3, 4}  # {1, 2, 3, 4}\n\nVirtual Environments\nAlways use virtual environments to isolate project dependencies:\npython -m venv .venv\nsource .venv/bin/activate  # Linux/Mac\n.venv\\Scripts\\activate     # Windows\n\nType Hints\nPython 3.5+ supports type hints for better code documentation and IDE support:\ndef greet(name: str) -> str:\n    return f\"Hello, {name}\"\n\nPopular Libraries\n\nRequests — HTTP client\nPandas — Data analysis\nPytest — Testing framework\nFastAPI — Web framework"
+    "text": "汉化图\n制作步骤\n下面整理成一个通用「足球数据图表汉化改稿提示词模板」。以后你给任何类似 FPL 数据图、排行榜、统计表，都可以直接套用。\n\n足球数据图表汉化改造提示词模板\n请根据原图进行汉化重绘。\n一、整体原则（不可改变）\n\n保持原图信息结构不变\n\n保留原图所有表格、排名顺序、数据数字、价格分组、颜色标识。\n不改变任何统计数据。\n不增加、不删除任何球员。\n不调整球员排名。\n不修改百分比、积分、次数等数值。\n\n保持原图视觉风格\n\n保留原图整体布局和信息图属性。\n\n可以优化清晰度、排版和视觉美观度。\n\n风格调整为：\n\n可爱手账风；\n柔和 pastel 配色；\n轻微赛璐璐插画质感；\n圆角表格；\n手账贴纸、胶带、小装饰元素。\n\n保持比例\n\n默认保持原图 3:4 竖版比例。\n如果文字汉化后空间不足，可以适当增加高度。\n不允许压缩文字导致无法阅读。\n\n二、绝对不能修改的内容\n1. 球员英文名必须保留\n所有球员名字保持英文原样。\n例如：\n正确：\nVAN DIJK\nGABRIEL\nGUEHI\nPEDRO PORRO\n\n错误：\n范戴克\n加布里埃尔\n格伊\n佩德罗·波罗\n\n不要翻译球员姓名。\n\n2. 队徽必须完全按照原图\n这是重点：\n\n原图中的俱乐部徽章必须保留。\n不允许重新绘制其他队徽。\n不允许根据球员名字猜测球队。\n不允许替换成其他球队 Logo。\n不允许简化成类似图案。\n\n例如：\n如果原图 Guehi 使用 Manchester City 队徽，则必须保持 Manchester City 队徽。\n如果原图球员属于其他球队，即使现实信息变化，也以原图为准。\n\n3. 数据字段保持原含义\n不要修改：\n\nTotal Starts 数值\nDEFCON hit rate 数值\nDEFCON p/start 数值\nAttacking returns 数值\n\n所有数字必须完全一致。\n\n三、需要汉化的内容\n1. 标题汉化\n例如：\n原文：\nDEFCON LEADERS (DEFENCE)\n\n改为：\nDEFCON 领先者（防守）\n\n注意：\n\nDEFCON 保留英文。\n不翻译成其他类似词。\n\n2. 表头汉化\n统一使用以下翻译：\n\n原文\n中文\n\nTotal Starts\n总出场次数\n\nDEFCON hit rate\nDEFCON命中率\n\nDEFCON p/start\nDEFCON关键球员\n\nAttacking returns\n进攻回报\n\n要求：\n\n中文必须准确。\n不使用机器直译。\n保证没有错别字。\n\n3. 联赛括号汉化\n球员名字后面的括号信息：\n规则：\n\n英文球员名保持不变。\n括号里的联赛名称翻译成中文。\n\n例如：\nVUSKOVIC (Bundesliga)\n\n改：\nVUSKOVIC（德甲）\n\n对应规则：\nBundesliga → 德甲\nSerie A → 意甲\nLigue 1 → 法甲\nChamp → 英冠\nPremier League → 英超\nLa Liga → 西甲\n\n特别注意：\nChamp 是 Championship（英格兰冠军联赛），必须翻译为：\n英冠\n\n不是：\n中冠\n\n四、版权信息\n原图作者信息必须保留：\n@FPL_TomHadley\n\n位置可以微调，但不能删除。\n不要添加其他来源信息。\n\n五、字体和文字要求\n\n中文字体需要清晰易读。\n\n不允许出现：\n\n错别字；\n生硬翻译；\n简体字错误；\n字符乱码。\n\n生成前需要人工检查：\n标题：\n「DEFCON 领先者（防守）」\n表头：\n「总出场次数」\n「DEFCON命中率」\n「DEFCON关键球员」\n「进攻回报」\n以上文字必须完全正确。\n\n六、最终生成要求总结\n请制作一张：\n「FPL 足球数据统计汉化信息图」\n要求：\n\n保留原图所有数据；\n保留英文球员名；\n保留原图队徽；\n保留作者署名；\n汉化标题、表头、联赛说明；\n使用可爱手账风 + 赛璐璐质感；\n保持3:4竖版；\n确保中文无任何错误；\n不自行修改任何原始足球信息。\n\n这个模板后面不仅适用于 DEFCON，也适用于 FPL 价格表、球员推荐表、Fixture Difficulty、队伍数据排行等类型的图片。"
   },
   {
     "title": "热菜大全",

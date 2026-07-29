@@ -1,35 +1,13 @@
 [
   {
     "type": "folder",
-    "name": "Football",
-    "slug": "football",
+    "name": "prompt",
+    "slug": "prompt",
     "children": [
       {
         "type": "page",
-        "title": "Arsenal FC",
-        "slug": "football/arsenal"
-      },
-      {
-        "type": "page",
-        "title": "Fantasy Premier League",
-        "slug": "football/fpl"
-      }
-    ]
-  },
-  {
-    "type": "folder",
-    "name": "Programming",
-    "slug": "programming",
-    "children": [
-      {
-        "type": "page",
-        "title": "Node.js Notes",
-        "slug": "programming/nodejs"
-      },
-      {
-        "type": "page",
-        "title": "Python Notes",
-        "slug": "programming/python"
+        "title": "汉化prompt",
+        "slug": "prompt/常用prompt模版"
       }
     ]
   },

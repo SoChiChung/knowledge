@@ -1,32 +1,17 @@
 [
   {
-    "title": "Node.js Notes",
-    "slug": "programming/nodejs",
-    "updatedAt": "2026-07-21"
-  },
-  {
-    "title": "Python Notes",
-    "slug": "programming/python",
-    "updatedAt": "2026-07-21"
-  },
-  {
-    "title": "Arsenal FC",
-    "slug": "football/arsenal",
-    "updatedAt": "2026-07-21"
-  },
-  {
-    "title": "Fantasy Premier League",
-    "slug": "football/fpl",
-    "updatedAt": "2026-07-21"
+    "title": "汉化prompt",
+    "slug": "prompt/常用prompt模版",
+    "updatedAt": "2026-07-29"
   },
   {
     "title": "热菜大全",
     "slug": "做菜/热菜",
-    "updatedAt": "2026-07-21"
+    "updatedAt": "2026-07-29"
   },
   {
     "title": "画图prompt",
     "slug": "画图/paint",
-    "updatedAt": "2026-07-21"
+    "updatedAt": "2026-07-29"
   }
 ]
