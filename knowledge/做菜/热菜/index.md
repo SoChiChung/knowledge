@@ -93,6 +93,9 @@ type: page
   2. 把炸好的鸡翅倒进酱汁锅，翻拌至每块鸡翅均匀裹满酱汁。
   3. 装盘后撒欧芹碎、玫瑰花瓣装饰，完成。
 
+   或者：玫瑰花放入清水，煮沸後合蓋小火煮15分鐘出味；下牛油和蜜糖混合，放入雞翼中火炒勻至掛汁；灑上白芝麻、蕃茜即成
+
 **素材来源链接**
 <https://www.youtube.com/watch?v=9nqq6nrmOKA>
+<https://www.instagram.com/reel/DF-af4DvA7r/>
 
